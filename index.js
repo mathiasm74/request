@@ -113,7 +113,7 @@ request.defaults = function (options, requester) {
 
   var defaults = wrapRequestMethod(self, options, requester)
 
-  var verbs = ['get', 'head', 'post', 'put', 'patch', 'del', 'delete']
+  var verbs = ['get', 'head', 'post', 'put', 'patch', 'del', 'delete', 'options']
   verbs.forEach(function (verb) {
     defaults[verb] = wrapRequestMethod(self[verb], options, requester, verb)
   })
